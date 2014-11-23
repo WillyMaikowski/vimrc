@@ -12,10 +12,13 @@ Instalación
 4) ... <br/>
 
 <i><strong>*JSHint</strong> tiene dependencias y requiere instalación propia.</i><br/>
-<strong>Puede ser util:</strong><br/>
--Instalar Node: <br/>
+
+Puede ser util
+-----
+
+<strong>-Instalar Node:</strong> <br/>
 <code>sudo apt-get install curl</code><br/>
 <code>curl -sL https://deb.nodesource.com/setup | sudo bash -</code><br/>
 <code>sudo apt-get install nodejs</code><br/>
--Instalar JSHint: <br/>
+<strong>-Instalar JSHint:</strong> <br/>
 <code>npm install jshint</code><br/>
