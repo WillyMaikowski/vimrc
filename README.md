@@ -10,3 +10,12 @@ Instalación
 2) Copiar esta configuración en tu .vimrc y guardar. <br/>
 3) Realizar <code>:PluginInstall</code> <br/>
 4) ... <br/>
+
+<i><strong>*JSHint</strong> tiene dependencias y requiere instalación propia.</i><br/>
+<strong>Puede ser util:</strong><br/>
+-Instalar Node: <br/>
+<code>sudo apt-get install curl</code><br/>
+<code>curl -sL https://deb.nodesource.com/setup | sudo bash -</code><br/>
+<code>sudo apt-get install nodejs</code><br/>
+-Instalar JSHint: <br/>
+<code>npm install jshint</code><br/>
