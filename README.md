@@ -18,7 +18,9 @@ Puede ser util
 
 <strong>-Instalar Node:</strong> <br/>
 <code>sudo apt-get install curl</code><br/>
-<code>curl -sL https://deb.nodesource.com/setup | sudo bash -</code><br/>
+<code>curl -sL <a href="https://deb.nodesource.com/setup">https://<strong>deb</strong>.nodesource.com/setup</a> | sudo bash -</code><br/>
 <code>sudo apt-get install nodejs</code><br/>
+<em>Para RHEL, Centos o Fedora ocupar <strong>yum</strong> en vez de <strong>sudo apt-get</strong>, y <strong>rpm</strong> en vez de <strong>deb</strong> en la direccion para curl.</em>
+
 <strong>-Instalar JSHint:</strong> <br/>
 <code>npm install jshint</code><br/>
