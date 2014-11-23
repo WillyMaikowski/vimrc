@@ -43,8 +43,7 @@ try
   colorscheme gruvbox
 catch
 endtry
-set background=dark
-hi Normal ctermbg=none
+
 if has("gui_running")
   set guioptions-=T
   set guioptions-=e
@@ -69,6 +68,8 @@ set laststatus=2
 set nowrap
 set t_Co=256
 
+set background=dark
+hi Normal ctermbg=none
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
