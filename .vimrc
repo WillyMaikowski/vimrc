@@ -8,12 +8,12 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'skammer/vim-css-color'
+Plugin 'ap/vim-css-color'
 Plugin 'Shutnik/jshint2.vim'
+Plugin 'hhvm/vim-hack'
 
 call vundle#end()
 filetype plugin indent on
-
 
 set history=700
 set autoread
@@ -71,18 +71,5 @@ set t_Co=256
 set background=dark
 hi Normal ctermbg=none
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-let g:user_emmet_settings = {
-      \  'php' : {
-      \    'extends' : 'html',
-      \    'filters' : 'c',
-      \  },
-      \  'xml' : {
-      \    'extends' : 'html',
-      \  },
-      \  'haml' : {
-      \    'extends' : 'html',
-      \  },
-      \}
+let g:lightline = { 'colorscheme': 'wombat' }
+let g:user_emmet_settings = { 'php' : {'extends' : 'html','filters' : 'c'}, 'xml' : {'extends' : 'html'}, 'haml' : {'extends' : 'html'} }
