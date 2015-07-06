@@ -7,7 +7,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'flazz/vim-colorschemes'
+"Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
 Plugin 'ap/vim-css-color'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'hhvm/vim-hack'
@@ -66,8 +67,8 @@ map <c-space> ?
 set viminfo^=%
 set laststatus=2
 set nowrap
-set t_Co=256
 
+set t_Co=256
 set background=dark
 hi Normal ctermbg=none
 
