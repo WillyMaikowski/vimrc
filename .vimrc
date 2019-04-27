@@ -1,76 +1,73 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set background=dark
+set nobackup
+set nowb
+set noswapfile
+set nowrap
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'mattn/emmet-vim'
-"Plugin 'flazz/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
-Plugin 'ap/vim-css-color'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'hhvm/vim-hack'
+syntax enable
+set expandtab
+set smartindent
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set number
 
-call vundle#end()
-filetype plugin indent on
+"highlight BadWhitespaceAndTabs ctermbg=blue guibg=blue guifg=red
+"match BadWhitespaceAndTabs /^\t\+/
+"match BadWhitespaceAndTabs /\s\+$/
 
-set history=700
-set autoread
-set so=7
+set ignorecase
+set encoding=UTF-8
+set fileencoding=UTF-8
+language en_US.utf8
+
+set pastetoggle=<F10>
+colorscheme gruvbox
+hi Normal ctermbg=none
+set laststatus=2
+set ruler
+
 set wildmenu
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+if has( 'win16' ) || has( 'win32' )
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
-  set wildignore+=.git\*,.hg\*,.svn\*
+	set wildignore+=.git\*,.hg\*,.svn\*
 endif
-set ruler
-set ignorecase
-set smartcase
+
 set hlsearch
 set incsearch
-set lazyredraw
+set smartcase
+set history=700
 set showmatch
 set mat=2
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-set foldcolumn=1
-syntax enable
-try
-  colorscheme gruvbox
-catch
-endtry
 
-if has("gui_running")
-  set guioptions-=T
-  set guioptions-=e
-  set guitablabel=%M\ %t
+if match($TERM, "screen")!=-1
+	set term=xterm
 endif
 
-set encoding=utf8
-set ffs=unix,dos,mac
-set nobackup
-set nowb
-set noswapfile
-set expandtab
-set smarttab
-set shiftwidth=2
-set tabstop=2
-set lbr
-set tw=500
 map <space> /
-map <c-space> ?
-set viminfo^=%
-set laststatus=2
-set nowrap
 
-set t_Co=256
-set background=dark
-hi Normal ctermbg=none
+if has("user_commands")
+	command! -bang -nargs=? -complete=file E e<bang> <args>
+	command! -bang -nargs=? -complete=file W w<bang> <args>
+	command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+	command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+	command! -bang Wa wa<bang>
+	command! -bang WA wa<bang>
+	command! -bang Q q<bang>
+	command! -bang QA qa<bang>
+	command! -bang Qa qa<bang>
+endif
 
 let g:lightline = { 'colorscheme': 'wombat' }
-let g:user_emmet_settings = { 'php' : {'extends' : 'html','filters' : 'c'}, 'xml' : {'extends' : 'html'}, 'haml' : {'extends' : 'html'} }
+let python_highlight_all = 1
