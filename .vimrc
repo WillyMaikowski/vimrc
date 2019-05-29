@@ -3,6 +3,8 @@ set nobackup
 set nowb
 set noswapfile
 set nowrap
+set undofile
+set undodir=~/.vim/undodir
 
 syntax enable
 set expandtab
