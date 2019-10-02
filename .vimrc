@@ -59,6 +59,9 @@ endif
 
 map <space> /
 
+" allow the . to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
+
 if has("user_commands")
 	command! -bang -nargs=? -complete=file E e<bang> <args>
 	command! -bang -nargs=? -complete=file W w<bang> <args>
