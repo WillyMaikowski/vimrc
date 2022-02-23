@@ -7,7 +7,15 @@ set undofile
 set undodir=~/.vim/undodir
 
 syntax enable
-set expandtab
+
+set noexpandtab
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set expandtab
+au BufRead,BufNewFile *.h set expandtab
+"au BufRead,BufNewFile Makefile* set noexpandtab
+"au BufRead,BufNewFile *.php set noexpandtab
+"au BufRead,BufNewFile *.html set noexpandtab
+
 set smartindent
 set autoindent
 set tabstop=4
