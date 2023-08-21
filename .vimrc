@@ -10,6 +10,8 @@ syntax enable
 
 set noexpandtab
 au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.yaml set expandtab
+au BufRead,BufNewFile *.yml set expandtab
 au BufRead,BufNewFile *.c set expandtab
 au BufRead,BufNewFile *.h set expandtab
 "au BufRead,BufNewFile Makefile* set noexpandtab
